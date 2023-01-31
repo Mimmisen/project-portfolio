@@ -1,15 +1,14 @@
 :root {
-  --clr-dark: #5f5f5f;
-  --clr-light: #d2b9cf;
-  --clr-grey: #f4f4f4;
-  --clr-gray: #c1c7d0;
   --clr-white: #fff;
   --clr-black: #000;
-  --clr-accent: #0d3cd2;
-  /* #fdf0e5 */
-  /* #ED4857 */
-  /* #172b4d */
-  /* #FBE7E7 */
+  --clr-dark: #5f5f5f;
+  --clr-light: #d0b5be;
+  --clr-contrast: #8e707a;
+  --clr-soft: #f9eaea;
+  --clr-bk1: #f9f3dd;
+  --clr-bk2: #cfdaee;
+  --clr-accent: #d4ea42;
+  --clr-gray: #c1c7d0;
 }
 
 html {
@@ -64,7 +63,7 @@ header {
   position: absolute;
   top: 356px;
   right: 24px;
-  border: 3px solid var(--clr-dark);
+  border: 3px solid var(--clr-black);
 }
 
 .plus-img {
@@ -97,7 +96,7 @@ header {
 
 h1 {
   margin: 0;
-  color: var(--clr-dark);
+  color: var(--clr-soft);
   font-family: 'Roboto', sans-serif;
 }
 
@@ -115,13 +114,13 @@ h1 {
 .description {
   font-size: 2em;
   text-align: center;
-  color: var(--clr-light);
+  color: var(--clr-black);
   margin: 1rem 0;
 }
 
 .text-type {
   font-family: 'Roboto', sans-serif;
-  color: var(--clr-accent);
+  color: var(--clr-black);
   margin: 10px 0;
 }
 
@@ -131,8 +130,8 @@ p {
   font-size: 16px;
 }
 
-.accent {
-  color: var(--clr-accent);
+.highlight {
+  color: var(--clr-contrast);
   font-weight: bold;
 }
 
@@ -145,9 +144,10 @@ ol {
   margin: 0;
 }
 
-a,
+a:link,
 a:visited {
   text-decoration: none;
+  color: var(--clr-black);
 }
 
 .section {
@@ -155,11 +155,11 @@ a:visited {
 }
 
 .section:nth-child(2n) {
-  background-color: var(--clr-grey);
+  background-color: var(--clr-bk1);
 }
 
 .section:nth-child(2n + 1) {
-  background-color: var(--clr-white);
+  background-color: var(--clr-bk2);
 }
 
 .container {
@@ -211,7 +211,7 @@ article.tech-section {
 article.project {
   max-width: 300px;
   background-color: var(--clr-white);
-  border: 1px solid var(--clr-gray);
+  border: 1px solid var(--clr-black);
   border-radius: 8px;
   display: -webkit-box;
   display: flex;
@@ -221,6 +221,7 @@ article.project {
 .project-image {
   width: 100%;
   display: block;
+  border-radius: 8px 8px 0 0;
 }
 
 .project-heading {
@@ -233,7 +234,7 @@ article.project {
   display: flex;
   align-items: center;
   flex-direction: column;
-  padding: 2rem;
+  /* padding: 2px; */
   background-color: var(--clr-light);
 }
 
@@ -254,7 +255,7 @@ article.project {
 }
 
 .tag {
-  background-color: #f9eaea;
+  background-color: var(--clr-soft);
   font-family: 'Roboto', sans-serif;
   font-size: 0.9em;
   padding: 0.5em 0.6em;
@@ -274,9 +275,9 @@ article.project {
   width: 7rem;
   font-size: 1em;
   font-weight: 500;
-  color: var(--clr-white);
+  color: var(--clr-black);
   border: none;
-  background-color: #ff6163;
+  background-color: var(--clr-accent);
   border-radius: 4px;
   padding: 0.8em;
   cursor: pointer;
@@ -288,14 +289,14 @@ article.project {
 .source-btn:hover {
   /* box-shadow: 0 0.7em 1.5em -0.5em #ff6163; */
   /* box-shadow: 0 0.1rem 0.8rem #ff6163; */
-  box-shadow: 0 0.5em 1.5em -0.5em #ff6163;
+  box-shadow: 0 0.5em 1.5em -0.5em var(--clr-accent);
 }
 
 /*---------------------------------------Other projects-------------------------------*/
 
 article.my-thoughts {
   max-width: 350px;
-  border: 1px solid #c1c7d0;
+  border: 1px solid var(--clr-black);
   border-radius: 8px;
   background-color: var(--clr-white);
 }
@@ -333,7 +334,7 @@ article.more-article {
 }
 
 .project-date {
-  color: var(--clr-accent);
+  color: var(--clr-contrast);
   font-size: 17px;
   font-weight: 400;
   margin: 14px 0;
@@ -345,7 +346,7 @@ article.more-article {
 }
 
 .arrow {
-  color: var(--clr-accent);
+  color: var(--clr-contrast);
   font-weight: 400;
 }
 
@@ -361,10 +362,10 @@ article.more-article {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #f9eaea;
-  border: 1px solid var(--clr-gray);
+  background-color: var(--clr-soft);
+  border: 1px solid var(--clr-black);
   border-radius: 8px;
-  padding: 1rem 0;
+  padding: 16px 8px;
 }
 
 /*--------------------------------------For More------------------------------*/
@@ -392,15 +393,23 @@ article.more-article {
 }
 
 .icon-text {
-  color: var(--clr-accent);
+  color: var(--clr-light);
   margin: 10px 0;
   text-align: center;
+  font-weight: bold;
 }
 
 /*---------------------------------------Contact------------------------------*/
 
 footer {
-  background-color: var(--clr-grey);
+  background-color: var(--clr-black);
+}
+
+.contact {
+  font-size: 2em;
+  text-align: center;
+  color: var(--clr-light);
+  margin: 1rem 0;
 }
 
 .contact-text-group {
@@ -412,15 +421,14 @@ footer {
 .contact-description {
   display: flex;
   flex-direction: column;
-  color: var(--clr-black);
   text-align: center;
-  font-size: 16px;
+  font-size: 20px;
   line-height: 2.3em;
 }
 
 .contact-info {
-  text-decoration: none;
-  color: var(--clr-black);
+  text-decoration: underline;
+  color: var(--clr-light);
 }
 
 .hidden {
@@ -528,6 +536,7 @@ footer {
     background: rgba(86, 86, 86, 0.6);
     content: '';
     opacity: 1;
+    border-radius: 8px 8px 0 0;
   }
 
   .project-overlay:hover:after,
