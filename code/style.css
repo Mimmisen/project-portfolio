@@ -2,9 +2,14 @@
   --clr-dark: #5f5f5f;
   --clr-light: #d2b9cf;
   --clr-grey: #f4f4f4;
+  --clr-gray: #c1c7d0;
   --clr-white: #fff;
   --clr-black: #000;
   --clr-accent: #0d3cd2;
+  /* #fdf0e5 */
+  /* #ED4857 */
+  /* #172b4d */
+  /* #FBE7E7 */
 }
 
 html {
@@ -13,7 +18,7 @@ html {
 
 body {
   margin: 0;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .social {
@@ -36,8 +41,9 @@ body {
 
 header {
   background-image: url(./images/sky-header.jpg);
+  /* background-image: url(./images/GRAIN_HOLOGRAM.jpg); */
   height: 520px;
-  background-position-x: 20%;
+  background-position-x: 60%;
   position: relative;
 }
 
@@ -92,18 +98,12 @@ header {
 h1 {
   margin: 0;
   color: var(--clr-dark);
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 .page-description {
   font-weight: 700;
   font-size: 40px;
-}
-
-.page-description-plus {
-  font-weight: 400;
-  font-size: 30px;
-  line-height: 50px;
 }
 
 .title {
@@ -113,22 +113,14 @@ h1 {
 }
 
 .description {
-  align-self: center;
+  font-size: 2em;
+  text-align: center;
   color: var(--clr-light);
-  background-color: var(--clr-dark);
-  padding: 5px;
-  margin: 2rem;
-}
-
-.description-two {
-  font-size: 22px;
-  align-self: center;
-  color: var(--clr-accent);
-  margin: 0;
+  margin: 1rem 0;
 }
 
 .text-type {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   color: var(--clr-accent);
   margin: 10px 0;
 }
@@ -141,6 +133,7 @@ p {
 
 .accent {
   color: var(--clr-accent);
+  font-weight: bold;
 }
 
 li {
@@ -152,8 +145,13 @@ ol {
   margin: 0;
 }
 
+a,
 a:visited {
   text-decoration: none;
+}
+
+.section {
+  padding: 2rem;
 }
 
 .section:nth-child(2n) {
@@ -165,10 +163,11 @@ a:visited {
 }
 
 .container {
-  padding: 16px 24px;
+  padding: 0 1rem 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 
 .space {
@@ -191,7 +190,7 @@ a:visited {
 /*---------------------------------------Tech------------------------------*/
 
 article.tech-section {
-  padding: 1rem 0 2rem;
+  /* padding: 1rem 0 2rem; */
 }
 
 .tech-text-group {
@@ -210,8 +209,13 @@ article.tech-section {
 }
 
 article.project {
-  max-width: 350px;
-  padding: 1rem;
+  max-width: 300px;
+  background-color: var(--clr-white);
+  border: 1px solid var(--clr-gray);
+  border-radius: 8px;
+  display: -webkit-box;
+  display: flex;
+  flex-direction: column;
 }
 
 .project-image {
@@ -224,30 +228,81 @@ article.project {
 }
 
 .project-image-group {
+  border-radius: 8px 8px 0 0;
   position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 2rem;
+  background-color: var(--clr-light);
+}
+
+.project-text-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
+  padding: 1rem 2rem 2rem;
+  gap: 0.8rem;
 }
 
 .tag-wrapper {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
+  gap: 0.5rem;
 }
 
 .tag {
-  background: var(--clr-light);
-  padding: 5px;
-  margin: 5px;
-  font-size: 16px;
-  font-family: "Roboto", sans-serif;
-  border-radius: 5px;
+  background-color: #f9eaea;
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.9em;
+  padding: 0.5em 0.6em;
+  border-radius: 4px;
+}
+
+.btn-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  margin-top: 1rem;
+}
+
+.live-btn,
+.source-btn {
+  width: 7rem;
+  font-size: 1em;
+  font-weight: 500;
+  color: var(--clr-white);
+  border: none;
+  background-color: #ff6163;
+  border-radius: 4px;
+  padding: 0.8em;
+  cursor: pointer;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.live-btn:hover,
+.source-btn:hover {
+  /* box-shadow: 0 0.7em 1.5em -0.5em #ff6163; */
+  /* box-shadow: 0 0.1rem 0.8rem #ff6163; */
+  box-shadow: 0 0.5em 1.5em -0.5em #ff6163;
 }
 
 /*---------------------------------------Other projects-------------------------------*/
 
 article.my-thoughts {
-  margin: 0.5rem;
-  padding: 1rem;
   max-width: 350px;
+  border: 1px solid #c1c7d0;
+  border-radius: 8px;
+  background-color: var(--clr-white);
+}
+
+.my-thoughts-text-group {
+  padding: 2rem;
+  text-align: center;
 }
 
 article.more-article {
@@ -274,6 +329,7 @@ article.more-article {
 .thoughts-image {
   width: 100%;
   display: block;
+  border-radius: 8px 8px 0 0;
 }
 
 .project-date {
@@ -293,27 +349,29 @@ article.more-article {
   font-weight: 400;
 }
 
-/*---------------------------------------My thoughts------------------------------*/
+/*---------------------------------------Skills------------------------------*/
 
 .skills-text-group {
   padding-bottom: 2rem;
   display: grid;
   gap: 2rem;
-  grid-template-columns: 1fr 1fr;
 }
 
 .skills-items {
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: #f9eaea;
+  border: 1px solid var(--clr-gray);
+  border-radius: 8px;
+  padding: 1rem 0;
 }
 
-/*--------------------------------------More thoughts------------------------------*/
+/*--------------------------------------For More------------------------------*/
 
 .for-more-text-group {
   display: flex;
   flex-direction: column;
-  padding: 1rem 0 2rem;
   align-items: center;
 }
 
@@ -339,21 +397,16 @@ article.more-article {
   text-align: center;
 }
 
-/*---------------------------------------Skills------------------------------*/
+/*---------------------------------------Contact------------------------------*/
 
 footer {
-  background-color: var(--clr-light);
+  background-color: var(--clr-grey);
 }
 
 .contact-text-group {
   display: flex;
   flex-direction: column;
   padding: 1rem;
-}
-
-.contact {
-  align-self: center;
-  color: var(--clr-black);
 }
 
 .contact-description {
@@ -384,6 +437,16 @@ footer {
 
   .header-image {
     top: 367px;
+  }
+}
+
+@media (min-width: 500px) {
+  .skills-text-group {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  article.project {
+    max-width: 350px;
   }
 }
 
@@ -463,7 +526,7 @@ footer {
     bottom: 0;
     left: 0;
     background: rgba(86, 86, 86, 0.6);
-    content: "";
+    content: '';
     opacity: 1;
   }
 
@@ -494,18 +557,8 @@ footer {
     font-size: 24px;
   }
 
-  .description {
-    font-size: 32px;
-    margin: 4rem;
-  }
-
-  .description-two {
-    font-size: 32px;
-    margin: 3rem 0 1rem;
-  }
-
   .skills-text-group {
-    gap: 2rem 8rem;
+    width: 500px;
   }
 }
 

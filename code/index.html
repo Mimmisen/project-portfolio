@@ -54,10 +54,6 @@
           </h1>
           <h1 class="page-description" tabindex="0">frontend</h1>
           <h1 class="page-description" tabindex="0">developer</h1>
-          <h1 class="page-description-plus" tabindex="0">
-            <img class="plus-img" src="./images/grey-plus.svg" alt="plus" />
-            design engineer
-          </h1>
         </div>
       </div>
     </header>
@@ -89,9 +85,14 @@
           <div class="tech-text-group">
             <h2 class="uppercase description" tabindex="0">tech</h2>
             <p class="tech-text" tabindex="0">
-              HTML, CSS, Flexbox, JavaScript, ES6, JSX, React, React Hooks,
-              Redux, Node.js, Mongo DB, Web Accessibly, API:s, mob-programming,
-              pair-programming, Github.
+              <span class="accent">React</span> | React Hooks |
+              <span class="accent">Redux</span> | Redux toolkit |
+              <span class="accent">JavaScript</span> | ES6 | JSX | HTML | CSS3 |
+              Flexbox | Grid | <span class="accent">Styled Components</span> |
+              Figma | Web Accessibly | Agile methodology | Mob-programming |
+              Pair-programming | PWA | Node.js |
+              <span class="accent">Headless CMS Sanity</span> | Mongo DB |
+              <span class="accent">API:s</span> | Github
             </p>
           </div>
         </article>
@@ -137,6 +138,10 @@
                 <li class="tag">CSS3</li>
                 <li class="tag">HTML5</li>
               </ol>
+              <div class="btn-wrapper">
+                <button type="button" class="live-btn">See Live</button>
+                <button type="button" class="source-btn">See Source</button>
+              </div>
             </div>
           </article>
 
@@ -173,6 +178,10 @@
                 <li class="tag">JavaScript ES6</li>
                 <li class="tag">HTML5</li>
               </ol>
+              <div class="btn-wrapper">
+                <button type="button" class="live-btn">See Live</button>
+                <button type="button" class="source-btn">See Source</button>
+              </div>
             </div>
           </article>
 
@@ -207,6 +216,10 @@
                   <li class="tag">CSS3</li>
                   <li class="tag">HTML5</li>
                 </ol>
+                <div class="btn-wrapper">
+                  <button type="button" class="live-btn">See Live</button>
+                  <button type="button" class="source-btn">See Source</button>
+                </div>
               </div>
             </article>
 
@@ -237,10 +250,6 @@
                     A Responsive web site using JavaScript ES6, CSS and HTML.
                     This Hospital bot can help you book a ambulance or a visit
                     to the doctor.
-                    <span class="accent"
-                      >(This chat bot doesn't work for real, please don't use
-                      this page for an actual injury)</span
-                    >
                   </p>
                 </a>
                 <ol class="tag-wrapper" tabindex="0">
@@ -248,6 +257,10 @@
                   <li class="tag">CSS3</li>
                   <li class="tag">HTML5</li>
                 </ol>
+                <div class="btn-wrapper">
+                  <button type="button" class="live-btn">See Live</button>
+                  <button type="button" class="source-btn">See Source</button>
+                </div>
               </div>
             </article>
           </div>
@@ -257,7 +270,7 @@
 
     <div class="container">
       <div class="more-container">
-        <h2 class="uppercase description-two" tabindex="0">other projects</h2>
+        <h2 class="uppercase description" tabindex="0">other projects</h2>
         <article class="more-article">
           <div class="space">
             <a
@@ -311,23 +324,38 @@
 
     <section class="section">
       <div class="container">
-        <h2 class="uppercase description" tabindex="0">my thoughts</h2>
+        <h2 class="uppercase description" tabindex="0">
+          articles I found interesting
+        </h2>
         <div class="my-thoughts-container">
           <article class="my-thoughts">
-            <img
-              class="thoughts-image"
-              tabindex="0"
-              src="./images/my-thoughts-img-1.png"
-              alt="desktop screen with code illustration and different icons in the background"
-            />
-            <div class="my-thoughts-text-group">
-              <h3 class="project-date" tabindex="0">March 2022</h3>
-              <h4 class="thoughts-title" tabindex="0">Changing career</h4>
-              <p class="thoughts-description" tabindex="0">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                <span class="arrow">>></span>
-              </p>
-            </div>
+            <a
+              href="https://bootcamp.uxdesign.cc/how-can-designers-effectively-handoff-their-work-to-developers-cf448d50599a"
+              target="-blank"
+              class="underline"
+            >
+              <img
+                class="thoughts-image"
+                tabindex="0"
+                src="./images/design-handover.png"
+                alt="figma file mockup created to make the design handoff smooth for the developer"
+              />
+              <div class="my-thoughts-text-group">
+                <h3 class="project-date" tabindex="0">March 2022</h3>
+                <h4 class="thoughts-title" tabindex="0">
+                  How can designers effectively handoff their work to
+                  developers?
+                </h4>
+                <p class="thoughts-description" tabindex="0">
+                  Have you ever struggled when delivering your designs to
+                  front-end developers? Can they understand it? Can they easily
+                  browse through your files? Do they check the correct version
+                  of your designs? Do they come to you asking things you thought
+                  they already knew?
+                  <span class="arrow">>></span>
+                </p>
+              </div>
+            </a>
           </article>
 
           <div class="hidden">
@@ -353,7 +381,8 @@
         </div>
       </div>
 
-      <div class="container">
+      <!--- MORE THOUGHTS SECTION -->
+      <!-- <div class="container">
         <div class="more-container">
           <h2 class="uppercase description-two" tabindex="0">more thoughts</h2>
           <article class="more-article">
@@ -388,7 +417,7 @@
             </div>
           </article>
         </div>
-      </div>
+      </div> --->
     </section>
 
     <section class="section">
@@ -396,44 +425,60 @@
         <h2 class="uppercase description" tabindex="0">skills</h2>
         <div class="skills-text-group">
           <div class="skills-items" tabindex="0">
-            <h3 class="uppercase text-type">code</h3>
+            <h3 class="uppercase text-type">frontend</h3>
+            <p>React</p>
+            <p>Redux</p>
+            <p>Redux toolkit</p>
+            <p>JavaScript ES6</p>
             <p>HTML</p>
             <p>CSS3</p>
-            <p>JavaScript ES6</p>
-            <p>React</p>
+            <p>PWA</p>
             <p>Styled Components</p>
-            <p>Github</p>
           </div>
 
           <div class="skills-items" tabindex="0">
             <h3 class="uppercase text-type">toolbox</h3>
+            <p>Github</p>
+            <p>mob-programming</p>
+            <p>pair-programming</p>
+            <p>Working in branches</p>
+            <p>Accessibly</p>
             <p>Figma</p>
+            <p>Agile methodology</p>
+            <p>Postman</p>
             <p>Slack</p>
-            <p>Adobe illustrator</p>
-            <p>Trello</p>
           </div>
 
           <div class="skills-items" tabindex="0">
-            <h3 class="uppercase text-type">more</h3>
-            <p>Agile methodology</p>
-            <p>Team work</p>
-            <p>Flexible</p>
-            <p>Problem solver</p>
+            <h3 class="uppercase text-type">Backend</h3>
+            <p>Headless CMS Sanity</p>
+            <p>Node.js</p>
+            <p>MongoDB</p>
           </div>
 
           <div class="skills-items" tabindex="0">
             <h3 class="uppercase text-type">upcoming</h3>
-            <p>Redux</p>
-            <p>Node.js</p>
+            <p>Typescript</p>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section">
+    <footer>
       <div class="container">
+        <div class="contact-text-group" tabindex="0">
+          <h2 class="uppercase description">contact</h2>
+          <p class="contact-description">
+            Mimmi Fordal Uddin
+            <a
+              aria-label="click or enter to send an email to Mimmi"
+              class="contact-info"
+              href="mailto:mimmi.fordaluddin@gmail.com"
+              >mimmi.fordaluddin@gmail.com</a
+            >
+          </p>
+        </div>
         <div class="for-more-text-group">
-          <h2 class="uppercase description" tabindex="0">for more</h2>
           <div class="social-two">
             <a class="social-link-two" href="https://se.linkedin.com/">
               <img
@@ -472,30 +517,6 @@
               >
             </a>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <footer>
-      <div class="container">
-        <div class="contact-text-group" tabindex="0">
-          <h2 class="uppercase contact">contact</h2>
-          <p class="contact-description">
-            Mimmi Fordal Uddin
-            <a
-              aria-label="click or enter to call Mimmi"
-              class="contact-info"
-              href="tel:+46738000346"
-            >
-              +4673 8000 346</a
-            >
-            <a
-              aria-label="click or enter to send an email to Mimmi"
-              class="contact-info"
-              href="mailto:mimmi.fordaluddin@hotmail.com"
-              >mimmi.fordaluddin@hotmail.com</a
-            >
-          </p>
         </div>
       </div>
     </footer>
