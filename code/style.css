@@ -177,6 +177,7 @@ a:visited {
 /*---------------------------------------intro-------------------------------*/
 .summary-section {
   padding: 2rem 0;
+  text-align: center;
 }
 
 .start-figure {
@@ -427,8 +428,8 @@ footer {
 }
 
 .contact-info {
-  text-decoration: underline;
-  color: var(--clr-light);
+  text-decoration: underline !important;
+  color: var(--clr-light) !important;
 }
 
 .hidden {
